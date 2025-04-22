@@ -1,0 +1,3 @@
+/home/the_atlas/my_shell/my_shell/build/CMakeFiles/my_shell.dir
+/home/the_atlas/my_shell/my_shell/build/CMakeFiles/edit_cache.dir
+/home/the_atlas/my_shell/my_shell/build/CMakeFiles/rebuild_cache.dir
