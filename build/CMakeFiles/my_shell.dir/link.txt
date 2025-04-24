@@ -1,1 +1,0 @@
-/usr/bin/cc  -Wall -Wextra -g -Wl,--dependency-file=CMakeFiles/my_shell.dir/link.d CMakeFiles/my_shell.dir/src/main.c.o CMakeFiles/my_shell.dir/src/input.c.o CMakeFiles/my_shell.dir/src/commandes.c.o CMakeFiles/my_shell.dir/src/shell.c.o -o my_shell
