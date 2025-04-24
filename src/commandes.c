@@ -2,8 +2,26 @@
 
 void executions_user_commandes(char **argv)
 {
-    for (int i = 0; argv[i] != NULL; i++)
+    __pid_t pid = fork();
+
+    if (pid == 0)
     {
-        printf("%s\n", argv[i]);
+        int test_exe = execvp(argv[0], argv);
+        if (test_exe == -1)
+        {
+            perror("Commande iconnue !");
+            exit(EXIT_FAILURE);
+        }
     }
+    else if (pid > 0)
+    {
+        wait(NULL);
+    }
+    else
+    {
+        perror("Erreur lors de fork");
+        exit(EXIT_FAILURE);
+    }
+
+    free(argv);
 }

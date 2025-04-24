@@ -4,7 +4,7 @@
 # compile C with /usr/bin/cc
 C_DEFINES = 
 
-C_INCLUDES = -I/home/the_atlas/my_shell/my_shell/include
+C_INCLUDES = -I/home/the_atlas/my_shell/app/include
 
 C_FLAGS =  -Wall -Wextra -g -std=gnu2x
 

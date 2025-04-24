@@ -1,7 +1,6 @@
 CMakeFiles/my_shell.dir/src/input.c.o: \
- /home/the_atlas/my_shell/my_shell/src/input.c /usr/include/stdc-predef.h \
- /home/the_atlas/my_shell/my_shell/src/../include/input.h \
- /usr/include/stdio.h \
+ /home/the_atlas/my_shell/app/src/input.c /usr/include/stdc-predef.h \
+ /home/the_atlas/my_shell/app/src/../include/input.h /usr/include/stdio.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \
  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
