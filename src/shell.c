@@ -15,6 +15,13 @@ void shell_loop()
         input[strcspn(input, "\n")] = 0;
         char **argv = parsing_user_input(input);
 
-        executions_user_commandes(argv);
+        if (is_builtin_command(argv[0]))
+        {
+            execute_builtin_command(argv);
+        }
+        else
+        {
+            executions_user_commandes(argv);
+        }
     }
 }
