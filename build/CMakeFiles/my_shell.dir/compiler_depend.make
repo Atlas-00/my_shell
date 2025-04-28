@@ -156,9 +156,11 @@ CMakeFiles/my_shell.dir/src/input.c.o: /home/the_atlas/my_shell/app/src/input.c 
 CMakeFiles/my_shell.dir/src/main.c.o: /home/the_atlas/my_shell/app/src/main.c \
   /home/the_atlas/my_shell/app/include/commandes.h \
   /home/the_atlas/my_shell/app/include/input.h \
+  /home/the_atlas/my_shell/app/include/pipes.h \
   /home/the_atlas/my_shell/app/include/shell.h \
   /usr/include/alloca.h \
   /usr/include/endian.h \
+  /usr/include/fcntl.h \
   /usr/include/features-time64.h \
   /usr/include/features.h \
   /usr/include/signal.h \
@@ -174,6 +176,8 @@ CMakeFiles/my_shell.dir/src/main.c.o: /home/the_atlas/my_shell/app/src/main.c \
   /usr/include/x86_64-linux-gnu/bits/endian.h \
   /usr/include/x86_64-linux-gnu/bits/endianness.h \
   /usr/include/x86_64-linux-gnu/bits/environments.h \
+  /usr/include/x86_64-linux-gnu/bits/fcntl-linux.h \
+  /usr/include/x86_64-linux-gnu/bits/fcntl.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
@@ -196,11 +200,13 @@ CMakeFiles/my_shell.dir/src/main.c.o: /home/the_atlas/my_shell/app/src/main.c \
   /usr/include/x86_64-linux-gnu/bits/sigstksz.h \
   /usr/include/x86_64-linux-gnu/bits/sigthread.h \
   /usr/include/x86_64-linux-gnu/bits/ss_flags.h \
+  /usr/include/x86_64-linux-gnu/bits/stat.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
+  /usr/include/x86_64-linux-gnu/bits/struct_stat.h \
   /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
   /usr/include/x86_64-linux-gnu/bits/time64.h \
   /usr/include/x86_64-linux-gnu/bits/timesize.h \
@@ -367,6 +373,14 @@ CMakeFiles/my_shell.dir/src/commandes.c.o:
 
 /usr/lib/x86_64-linux-gnu/Scrt1.o:
 
+/usr/include/x86_64-linux-gnu/bits/struct_stat.h:
+
+/usr/include/x86_64-linux-gnu/bits/fcntl-linux.h:
+
+/usr/include/fcntl.h:
+
+/home/the_atlas/my_shell/app/include/pipes.h:
+
 /usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o:
 
 /home/the_atlas/my_shell/app/include/input.h:
@@ -412,6 +426,8 @@ CMakeFiles/my_shell.dir/src/input.c.o:
 /usr/include/x86_64-linux-gnu/bits/types/sigval_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h:
+
+/usr/include/x86_64-linux-gnu/bits/fcntl.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/sigevent_t.h:
 
@@ -530,6 +546,8 @@ CMakeFiles/my_shell.dir/src/input.c.o:
 /usr/include/x86_64-linux-gnu/bits/ss_flags.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdio_lim.h:
+
+/usr/include/x86_64-linux-gnu/bits/stat.h:
 
 /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h:
 

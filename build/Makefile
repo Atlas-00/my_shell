@@ -208,6 +208,54 @@ src/main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_shell.dir/build.make CMakeFiles/my_shell.dir/src/main.c.s
 .PHONY : src/main.c.s
 
+src/pipes.o: src/pipes.c.o
+.PHONY : src/pipes.o
+
+# target to build an object file
+src/pipes.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_shell.dir/build.make CMakeFiles/my_shell.dir/src/pipes.c.o
+.PHONY : src/pipes.c.o
+
+src/pipes.i: src/pipes.c.i
+.PHONY : src/pipes.i
+
+# target to preprocess a source file
+src/pipes.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_shell.dir/build.make CMakeFiles/my_shell.dir/src/pipes.c.i
+.PHONY : src/pipes.c.i
+
+src/pipes.s: src/pipes.c.s
+.PHONY : src/pipes.s
+
+# target to generate assembly for a file
+src/pipes.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_shell.dir/build.make CMakeFiles/my_shell.dir/src/pipes.c.s
+.PHONY : src/pipes.c.s
+
+src/redirections.o: src/redirections.c.o
+.PHONY : src/redirections.o
+
+# target to build an object file
+src/redirections.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_shell.dir/build.make CMakeFiles/my_shell.dir/src/redirections.c.o
+.PHONY : src/redirections.c.o
+
+src/redirections.i: src/redirections.c.i
+.PHONY : src/redirections.i
+
+# target to preprocess a source file
+src/redirections.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_shell.dir/build.make CMakeFiles/my_shell.dir/src/redirections.c.i
+.PHONY : src/redirections.c.i
+
+src/redirections.s: src/redirections.c.s
+.PHONY : src/redirections.s
+
+# target to generate assembly for a file
+src/redirections.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_shell.dir/build.make CMakeFiles/my_shell.dir/src/redirections.c.s
+.PHONY : src/redirections.c.s
+
 src/shell.o: src/shell.c.o
 .PHONY : src/shell.o
 
@@ -251,6 +299,12 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/pipes.o"
+	@echo "... src/pipes.i"
+	@echo "... src/pipes.s"
+	@echo "... src/redirections.o"
+	@echo "... src/redirections.i"
+	@echo "... src/redirections.s"
 	@echo "... src/shell.o"
 	@echo "... src/shell.i"
 	@echo "... src/shell.s"

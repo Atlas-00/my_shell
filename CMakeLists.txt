@@ -13,4 +13,5 @@ add_executable(
     src/input.c # Lit les commandes 
     src/commandes.c # Excute les commandes 
     src/shell.c  # Boucle principale du shell
+    src/utils.c # Gere les pipes et les redirections
 )

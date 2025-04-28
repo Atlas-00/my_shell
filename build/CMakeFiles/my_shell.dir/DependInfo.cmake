@@ -11,6 +11,8 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/the_atlas/my_shell/app/src/commandes.c" "CMakeFiles/my_shell.dir/src/commandes.c.o" "gcc" "CMakeFiles/my_shell.dir/src/commandes.c.o.d"
   "/home/the_atlas/my_shell/app/src/input.c" "CMakeFiles/my_shell.dir/src/input.c.o" "gcc" "CMakeFiles/my_shell.dir/src/input.c.o.d"
   "/home/the_atlas/my_shell/app/src/main.c" "CMakeFiles/my_shell.dir/src/main.c.o" "gcc" "CMakeFiles/my_shell.dir/src/main.c.o.d"
+  "/home/the_atlas/my_shell/app/src/pipes.c" "CMakeFiles/my_shell.dir/src/pipes.c.o" "gcc" "CMakeFiles/my_shell.dir/src/pipes.c.o.d"
+  "/home/the_atlas/my_shell/app/src/redirections.c" "CMakeFiles/my_shell.dir/src/redirections.c.o" "gcc" "CMakeFiles/my_shell.dir/src/redirections.c.o.d"
   "/home/the_atlas/my_shell/app/src/shell.c" "CMakeFiles/my_shell.dir/src/shell.c.o" "gcc" "CMakeFiles/my_shell.dir/src/shell.c.o.d"
   "" "my_shell" "gcc" "CMakeFiles/my_shell.dir/link.d"
   )

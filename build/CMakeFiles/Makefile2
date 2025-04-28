@@ -85,12 +85,12 @@ clean: CMakeFiles/my_shell.dir/clean
 CMakeFiles/my_shell.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_shell.dir/build.make CMakeFiles/my_shell.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_shell.dir/build.make CMakeFiles/my_shell.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/the_atlas/my_shell/app/build/CMakeFiles --progress-num=1,2,3,4,5 "Built target my_shell"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/the_atlas/my_shell/app/build/CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target my_shell"
 .PHONY : CMakeFiles/my_shell.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/my_shell.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/the_atlas/my_shell/app/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/the_atlas/my_shell/app/build/CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/my_shell.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/the_atlas/my_shell/app/build/CMakeFiles 0
 .PHONY : CMakeFiles/my_shell.dir/rule
@@ -102,7 +102,7 @@ my_shell: CMakeFiles/my_shell.dir/rule
 # codegen rule for target.
 CMakeFiles/my_shell.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_shell.dir/build.make CMakeFiles/my_shell.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/the_atlas/my_shell/app/build/CMakeFiles --progress-num=1,2,3,4,5 "Finished codegen for target my_shell"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/the_atlas/my_shell/app/build/CMakeFiles --progress-num=1,2,3,4,5,6,7 "Finished codegen for target my_shell"
 .PHONY : CMakeFiles/my_shell.dir/codegen
 
 # clean rule for target.
