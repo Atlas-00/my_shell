@@ -208,54 +208,6 @@ src/main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_shell.dir/build.make CMakeFiles/my_shell.dir/src/main.c.s
 .PHONY : src/main.c.s
 
-src/pipes.o: src/pipes.c.o
-.PHONY : src/pipes.o
-
-# target to build an object file
-src/pipes.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_shell.dir/build.make CMakeFiles/my_shell.dir/src/pipes.c.o
-.PHONY : src/pipes.c.o
-
-src/pipes.i: src/pipes.c.i
-.PHONY : src/pipes.i
-
-# target to preprocess a source file
-src/pipes.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_shell.dir/build.make CMakeFiles/my_shell.dir/src/pipes.c.i
-.PHONY : src/pipes.c.i
-
-src/pipes.s: src/pipes.c.s
-.PHONY : src/pipes.s
-
-# target to generate assembly for a file
-src/pipes.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_shell.dir/build.make CMakeFiles/my_shell.dir/src/pipes.c.s
-.PHONY : src/pipes.c.s
-
-src/redirections.o: src/redirections.c.o
-.PHONY : src/redirections.o
-
-# target to build an object file
-src/redirections.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_shell.dir/build.make CMakeFiles/my_shell.dir/src/redirections.c.o
-.PHONY : src/redirections.c.o
-
-src/redirections.i: src/redirections.c.i
-.PHONY : src/redirections.i
-
-# target to preprocess a source file
-src/redirections.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_shell.dir/build.make CMakeFiles/my_shell.dir/src/redirections.c.i
-.PHONY : src/redirections.c.i
-
-src/redirections.s: src/redirections.c.s
-.PHONY : src/redirections.s
-
-# target to generate assembly for a file
-src/redirections.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_shell.dir/build.make CMakeFiles/my_shell.dir/src/redirections.c.s
-.PHONY : src/redirections.c.s
-
 src/shell.o: src/shell.c.o
 .PHONY : src/shell.o
 
@@ -280,6 +232,30 @@ src/shell.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_shell.dir/build.make CMakeFiles/my_shell.dir/src/shell.c.s
 .PHONY : src/shell.c.s
 
+src/utils.o: src/utils.c.o
+.PHONY : src/utils.o
+
+# target to build an object file
+src/utils.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_shell.dir/build.make CMakeFiles/my_shell.dir/src/utils.c.o
+.PHONY : src/utils.c.o
+
+src/utils.i: src/utils.c.i
+.PHONY : src/utils.i
+
+# target to preprocess a source file
+src/utils.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_shell.dir/build.make CMakeFiles/my_shell.dir/src/utils.c.i
+.PHONY : src/utils.c.i
+
+src/utils.s: src/utils.c.s
+.PHONY : src/utils.s
+
+# target to generate assembly for a file
+src/utils.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_shell.dir/build.make CMakeFiles/my_shell.dir/src/utils.c.s
+.PHONY : src/utils.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -299,15 +275,12 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
-	@echo "... src/pipes.o"
-	@echo "... src/pipes.i"
-	@echo "... src/pipes.s"
-	@echo "... src/redirections.o"
-	@echo "... src/redirections.i"
-	@echo "... src/redirections.s"
 	@echo "... src/shell.o"
 	@echo "... src/shell.i"
 	@echo "... src/shell.s"
+	@echo "... src/utils.o"
+	@echo "... src/utils.i"
+	@echo "... src/utils.s"
 .PHONY : help
 
 

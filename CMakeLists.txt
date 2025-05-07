@@ -15,3 +15,5 @@ add_executable(
     src/shell.c  # Boucle principale du shell
     src/utils.c # Gere les pipes et les redirections
 )
+
+target_link_libraries(${PROJECT_NAME} readline history)

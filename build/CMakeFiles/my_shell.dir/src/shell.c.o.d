@@ -81,4 +81,11 @@ CMakeFiles/my_shell.dir/src/shell.c.o: \
  /usr/include/x86_64-linux-gnu/bits/types/struct_sigstack.h \
  /usr/include/x86_64-linux-gnu/bits/sigthread.h \
  /usr/include/x86_64-linux-gnu/bits/signal_ext.h \
- /usr/include/x86_64-linux-gnu/bits/types/idtype_t.h
+ /usr/include/x86_64-linux-gnu/bits/types/idtype_t.h \
+ /usr/include/readline/readline.h /usr/include/readline/rlstdc.h \
+ /usr/include/readline/rltypedefs.h /usr/include/readline/keymaps.h \
+ /usr/include/readline/chardefs.h /usr/include/ctype.h \
+ /usr/include/readline/tilde.h /usr/include/readline/history.h \
+ /usr/include/time.h /usr/include/x86_64-linux-gnu/bits/time.h \
+ /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
+ /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h

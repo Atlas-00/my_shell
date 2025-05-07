@@ -1,17 +1,24 @@
 #include "../include/shell.h"
 
+#define PATH_MAX 4096
+
 void shell_loop()
 {
-    char input[1024];
+    char *input;
+    char buffer[PATH_MAX];
 
     while (1)
     {
-        printf("> ");
+        if (getcwd(buffer, sizeof(buffer)) != NULL)
+            printf("%s", buffer);
+        else
+        {
+            perror("getcwd() erreur");
+            return;
+        }
 
-        if (fgets(input, sizeof(input), stdin) == NULL)
-            break;
+        input = readline(":~$ ");
 
-        // Parsing 
         input[strcspn(input, "\n")] = 0;
         char **argv = parsing_user_input(input);
 

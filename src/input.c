@@ -32,7 +32,6 @@ char **parsing_user_input(char *input)
         str_token = strtok(NULL, " ");
         args++;
     }
-
     argv[args] = NULL;
     return argv;
 }

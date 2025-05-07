@@ -128,33 +128,19 @@ CMakeFiles/my_shell.dir/src/shell.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/my_shell.dir/src/shell.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/the_atlas/my_shell/app/src/shell.c -o CMakeFiles/my_shell.dir/src/shell.c.s
 
-CMakeFiles/my_shell.dir/src/pipes.c.o: CMakeFiles/my_shell.dir/flags.make
-CMakeFiles/my_shell.dir/src/pipes.c.o: /home/the_atlas/my_shell/app/src/pipes.c
-CMakeFiles/my_shell.dir/src/pipes.c.o: CMakeFiles/my_shell.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/the_atlas/my_shell/app/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/my_shell.dir/src/pipes.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/my_shell.dir/src/pipes.c.o -MF CMakeFiles/my_shell.dir/src/pipes.c.o.d -o CMakeFiles/my_shell.dir/src/pipes.c.o -c /home/the_atlas/my_shell/app/src/pipes.c
+CMakeFiles/my_shell.dir/src/utils.c.o: CMakeFiles/my_shell.dir/flags.make
+CMakeFiles/my_shell.dir/src/utils.c.o: /home/the_atlas/my_shell/app/src/utils.c
+CMakeFiles/my_shell.dir/src/utils.c.o: CMakeFiles/my_shell.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/the_atlas/my_shell/app/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/my_shell.dir/src/utils.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/my_shell.dir/src/utils.c.o -MF CMakeFiles/my_shell.dir/src/utils.c.o.d -o CMakeFiles/my_shell.dir/src/utils.c.o -c /home/the_atlas/my_shell/app/src/utils.c
 
-CMakeFiles/my_shell.dir/src/pipes.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/my_shell.dir/src/pipes.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/the_atlas/my_shell/app/src/pipes.c > CMakeFiles/my_shell.dir/src/pipes.c.i
+CMakeFiles/my_shell.dir/src/utils.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/my_shell.dir/src/utils.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/the_atlas/my_shell/app/src/utils.c > CMakeFiles/my_shell.dir/src/utils.c.i
 
-CMakeFiles/my_shell.dir/src/pipes.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/my_shell.dir/src/pipes.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/the_atlas/my_shell/app/src/pipes.c -o CMakeFiles/my_shell.dir/src/pipes.c.s
-
-CMakeFiles/my_shell.dir/src/redirections.c.o: CMakeFiles/my_shell.dir/flags.make
-CMakeFiles/my_shell.dir/src/redirections.c.o: /home/the_atlas/my_shell/app/src/redirections.c
-CMakeFiles/my_shell.dir/src/redirections.c.o: CMakeFiles/my_shell.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/the_atlas/my_shell/app/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/my_shell.dir/src/redirections.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/my_shell.dir/src/redirections.c.o -MF CMakeFiles/my_shell.dir/src/redirections.c.o.d -o CMakeFiles/my_shell.dir/src/redirections.c.o -c /home/the_atlas/my_shell/app/src/redirections.c
-
-CMakeFiles/my_shell.dir/src/redirections.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/my_shell.dir/src/redirections.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/the_atlas/my_shell/app/src/redirections.c > CMakeFiles/my_shell.dir/src/redirections.c.i
-
-CMakeFiles/my_shell.dir/src/redirections.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/my_shell.dir/src/redirections.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/the_atlas/my_shell/app/src/redirections.c -o CMakeFiles/my_shell.dir/src/redirections.c.s
+CMakeFiles/my_shell.dir/src/utils.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/my_shell.dir/src/utils.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/the_atlas/my_shell/app/src/utils.c -o CMakeFiles/my_shell.dir/src/utils.c.s
 
 # Object files for target my_shell
 my_shell_OBJECTS = \
@@ -162,8 +148,7 @@ my_shell_OBJECTS = \
 "CMakeFiles/my_shell.dir/src/input.c.o" \
 "CMakeFiles/my_shell.dir/src/commandes.c.o" \
 "CMakeFiles/my_shell.dir/src/shell.c.o" \
-"CMakeFiles/my_shell.dir/src/pipes.c.o" \
-"CMakeFiles/my_shell.dir/src/redirections.c.o"
+"CMakeFiles/my_shell.dir/src/utils.c.o"
 
 # External object files for target my_shell
 my_shell_EXTERNAL_OBJECTS =
@@ -172,12 +157,11 @@ my_shell: CMakeFiles/my_shell.dir/src/main.c.o
 my_shell: CMakeFiles/my_shell.dir/src/input.c.o
 my_shell: CMakeFiles/my_shell.dir/src/commandes.c.o
 my_shell: CMakeFiles/my_shell.dir/src/shell.c.o
-my_shell: CMakeFiles/my_shell.dir/src/pipes.c.o
-my_shell: CMakeFiles/my_shell.dir/src/redirections.c.o
+my_shell: CMakeFiles/my_shell.dir/src/utils.c.o
 my_shell: CMakeFiles/my_shell.dir/build.make
 my_shell: CMakeFiles/my_shell.dir/compiler_depend.ts
 my_shell: CMakeFiles/my_shell.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/the_atlas/my_shell/app/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking C executable my_shell"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/the_atlas/my_shell/app/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking C executable my_shell"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/my_shell.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
