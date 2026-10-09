@@ -2,7 +2,7 @@
 
 void executions_user_commandes(char **argv)
 {
-    __pid_t pid = fork();
+    pid_t pid = fork();
 
     if (pid == 0)
     {
