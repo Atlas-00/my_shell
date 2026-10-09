@@ -1,7 +1,0 @@
-{
-	"InstallScripts" : 
-	[
-		"/home/the_atlas/my_shell/app/build/cmake_install.cmake"
-	],
-	"Parallel" : false
-}
