@@ -1,7 +1,16 @@
 // Inclut le header lié à l'exécution des commandes
 #include "../include/commandes.h"
 
-// Lance une commande système dans un processus enfant et attend qu'elle se termine
+/**
+ * @brief Exécute une commande système dans un processus enfant.
+ *
+ * Crée un processus avec fork(), lance la commande avec execvp() dans
+ * le processus enfant, puis attend sa terminaison dans le processus parent.
+ * Quitte le programme si fork() ou execvp() échoue.
+ *
+ * @param argv Tableau d'arguments terminé par NULL. argv[0] contient
+ *             le nom de la commande. Le tableau est libéré par cette fonction.
+ */
 void executions_user_commandes(char **argv)
 {
     // Duplique le processus : pid == 0 dans l'enfant, pid > 0 dans le parent, pid < 0 si erreur
@@ -36,10 +45,21 @@ void executions_user_commandes(char **argv)
     free(argv);
 }
 
-// Indique si la commande est un builtin (codé dans le shell lui-même)
-// Renvoie 1 si oui, 0 sinon
+/**
+ * @brief Vérifie si une commande est intégrée au shell.
+ *
+ * Les commandes intégrées reconnues sont « exit », « cd » et « help ».
+ *
+ * @param command Nom de la commande à vérifier.
+ * @return 1 si la commande est intégrée, 0 sinon ou si command vaut NULL.
+ */
 int is_builtin_command(char *command)
 {
+    if (command == NULL)
+    {
+        fprintf(stderr, "Erreur : Aucune commande passer \n");
+        return 0;
+    }
     // Liste des commandes gérées en interne
     char *builtin_command[3] = {"exit", "cd", "help"};
     for (int i = 0; i < 3; i++)
@@ -52,7 +72,16 @@ int is_builtin_command(char *command)
     return 0;
 }
 
-// Exécute un builtin dans le processus du shell
+/**
+ * @brief Exécute une commande intégrée du shell.
+ *
+ * Traite les commandes « cd », « exit » et « help ». Si argv[0] ne
+ * correspond à aucune de ces commandes, lance la commande comme une
+ * commande système avec executions_user_commandes().
+ *
+ * @param argv Tableau d'arguments terminé par NULL. argv[0] contient
+ *             le nom de la commande ; les arguments éventuels suivent.
+ */
 void execute_builtin_command(char **argv)
 {
     // Commande "cd" : change le répertoire courant du shell

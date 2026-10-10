@@ -1,8 +1,14 @@
 // Inclut le header des fonctions utilitaires
 #include "../include/utils.h"
 
-// Indique si un mot est un symbole de redirection ou de pipe
-// Renvoie 1 si oui, 0 sinon
+/**
+ * @brief Vérifie si un token est un symbole de redirection ou de pipe.
+ *
+ * Les symboles reconnus sont « < », « > », « >> » et « | ».
+ *
+ * @param token Chaîne à comparer. Elle ne doit pas être NULL.
+ * @return 1 si token correspond à un symbole reconnu, 0 sinon.
+ */
 int is_redirection_or_pipe(char *token)
 {
     // Symboles recherchés : entrée (<), sortie (>), sortie en ajout (>>), pipe (|)
@@ -18,8 +24,15 @@ int is_redirection_or_pipe(char *token)
     return 0;
 }
 
-// Indique si une commande (tableau d'arguments terminé par NULL)
-// contient au moins un symbole de redirection ou de pipe
+/**
+ * @brief Vérifie si une commande contient une redirection ou un pipe.
+ *
+ * Parcourt les éléments de command jusqu'à son marqueur final NULL et
+ * teste chacun d'eux avec is_redirection_or_pipe().
+ *
+ * @param command Tableau de chaînes terminé par NULL. Il ne doit pas être NULL.
+ * @return 1 si un symbole de redirection ou de pipe est présent, 0 sinon.
+ */
 int contains_redirection_or_pipe(char **command)
 {
     // Parcourt tous les arguments jusqu'au NULL final

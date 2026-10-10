@@ -1,51 +1,71 @@
-// Inclut le header lié au traitement de l'entrée utilisateur
 #include "../include/input.h"
 
-// Nombre maximum d'éléments dans le tableau d'arguments (dernier slot réservé au NULL)
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+/* Nombre maximum d'arguments, sans compter le NULL final. */
 #define MAX_ARGS 64
 
-// Découpe la ligne saisie en mots (séparés par des espaces)
-// Renvoie un tableau de pointeurs terminé par NULL, ou NULL en cas d'erreur
+/**
+ * @brief Découpe une ligne de commande en arguments.
+ *
+ * Sépare la ligne aux espaces, tabulations et retours à la ligne.
+ * strtok() modifie la chaîne input en remplaçant les séparateurs par '\0' ;
+ * les chaînes pointées par argv restent donc dans la mémoire de input.
+ *
+ * @param input Ligne à découper. Elle doit être modifiable.
+ * @return Tableau d'arguments terminé par NULL, ou NULL si input est NULL,
+ *         si la ligne ne contient aucun argument ou en cas d'erreur.
+ *         Le tableau retourné doit être libéré avec free().
+ */
 char **parsing_user_input(char *input)
 {
-    // Vérifie qu'on a bien reçu une ligne
+    /* Une chaîne NULL ne peut pas être découpée. */
     if (input == NULL)
     {
         fprintf(stderr, "Erreur : input est NULL\n");
         return NULL;
     }
 
-    // Alloue le tableau qui contiendra les pointeurs vers chaque argument
+    /* Réserve de la place pour MAX_ARGS pointeurs, NULL final compris. */
     char **argv = malloc(sizeof(char *) * MAX_ARGS);
     if (argv == NULL)
     {
-        // Échec de l'allocation mémoire : message d'erreur système et abandon
-        perror("Erreur : L'allocation à échoué\n");
+        perror("Erreur d'allocation de argv");
         return NULL;
     }
 
-    int args = 0; // Compteur d'arguments déjà stockés
+    int args = 0;
 
-    // strtok découpe la chaîne sur les espaces : premier appel avec la chaîne
-    // Attention : strtok MODIFIE input (remplace les espaces par des '\0'),
-    // donc argv pointe à l'intérieur de input, il n'y a pas de copie
-    char *str_token = strtok(input, " ");
+    /* strtok modifie input et renvoie chaque argument l'un après l'autre. */
+    char *str_token = strtok(input, " \t\n");
+
     while (str_token != NULL)
     {
-        // On garde une place pour le NULL final : si le tableau est plein, on abandonne
+        /* Garde une case pour le NULL final. */
         if (args >= MAX_ARGS - 1)
         {
-            fprintf(stderr, "Erreur : trop d'arguments (limite = %d)\n", MAX_ARGS);
+            fprintf(stderr, "Erreur : trop d'arguments (maximum : %d)\n",
+                    MAX_ARGS - 1);
             free(argv);
             return NULL;
         }
 
-        argv[args] = str_token;        // Range le mot trouvé dans le tableau
-        str_token = strtok(NULL, " "); // Mot suivant (NULL = on continue sur la même chaîne)
+        argv[args] = str_token;
         args++;
+
+        str_token = strtok(NULL, " \t\n");
     }
 
-    // Termine le tableau par NULL, comme l'exige execvp
+    /* Une ligne vide ou composée seulement de séparateurs ne contient aucun argument. */
+    if (args == 0)
+    {
+        free(argv);
+        return NULL;
+    }
+
+    /* execvp() attend un tableau terminé par NULL. */
     argv[args] = NULL;
     return argv;
 }

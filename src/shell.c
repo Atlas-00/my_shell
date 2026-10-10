@@ -4,7 +4,20 @@
 // Taille maximale d'un chemin de répertoire (en octets) pour le buffer getcwd
 #define PATH_MAX 4096
 
-// Boucle principale du shell : affiche le prompt, lit une commande, l'exécute, recommence
+/**
+ * @brief Exécute la boucle principale du shell.
+ *
+ * Affiche le répertoire courant dans le prompt, lit les commandes saisies
+ * avec readline(), puis les découpe en arguments. Les commandes intégrées
+ * sont exécutées dans le processus du shell ; les autres sont lancées
+ * comme des commandes système.
+ *
+ * La boucle se termine si getcwd() échoue ou si readline() indique la fin
+ * de l'entrée. La commande intégrée « exit » peut également terminer
+ * le programme.
+ *
+ * @return Cette fonction ne retourne aucune valeur.
+ */
 void shell_loop()
 {
     char *input;           // Ligne tapée par l'utilisateur (allouée par readline)
@@ -26,26 +39,40 @@ void shell_loop()
 
         // Affiche ":~$ " et lit la ligne saisie par l'utilisateur
         // (avec historique et édition de ligne grâce à readline)
-        input = readline(":~$ ");
+        input = readline(" :~$ ");
 
-        // Remplace le premier '\n' trouvé dans la ligne par '\0' (fin de chaîne)
-        // strcspn renvoie la position du premier '\n', ou la longueur de la chaîne s'il n'y en a pas
-        input[strcspn(input, "\n")] = 0;
-
-        // Découpe la ligne en tableau d'arguments (argv[0] = commande, argv[1..] = arguments)
-        char **argv = parsing_user_input(input);
-
-        // Si la commande fait partie de celles codées dans le shell (exit, cd, help)
-        if (is_builtin_command(argv[0]))
+        if (input == NULL)
         {
-            // On l'exécute directement dans le processus du shell
-            execute_builtin_command(argv);
+            printf("Fin du programme \n");
+            return;
+        }
+        else if (strcmp(input, "") == 0)
+        {
+            free(input);
+            continue;
         }
         else
         {
-            // Sinon, c'est une commande système (ls, pwd...) : on la lance dans un processus enfant
-            executions_user_commandes(argv);
+            // Découpe la ligne en tableau d'arguments (argv[0] = commande, argv[1..] = arguments)
+            char **argv = parsing_user_input(input);
+
+            if (argv == NULL || argv[0] == NULL)
+            {
+                free(argv);
+                continue;
+            }
+
+            // Si la commande fait partie de celles codées dans le shell (exit, cd, help)
+            if (is_builtin_command(argv[0]))
+            {
+                // On l'exécute directement dans le processus du shell
+                execute_builtin_command(argv);
+            }
+            else
+            {
+                // Sinon, c'est une commande système (ls, pwd...) : on la lance dans un processus enfant
+                executions_user_commandes(argv);
+            }
         }
     }
 }
-
